@@ -11,28 +11,24 @@ var app = new Vue(
       el: '#root',
       data: {
         obj: [
-            { id: 1, Image: './img/basket.jpg' },
-            { id: 2, Image: './img/bicicle mountain.jpg' },
-            { id: 3, Image: './img/diving.jpg' },
-            { id: 4, Image: './img/runner.jpg' },
-            { id: 5, Image: './img/snowboard.jpg'}
+            { Image: './img/basket.jpg' },
+            { Image: './img/bicicle mountain.jpg' },
+            { Image: './img/diving.jpg' },
+            { Image: './img/runner.jpg' },
+            { Image: './img/snowboard.jpg'}
         ],
         index : 0,
      },
 
-    //  created: setTimeout( cambioImage, 3000 ),
+     created() {setInterval( this.cambiaOggettoNext, 10000 )},
      
       methods: {
 
-//         function cambioImage(){
-//             return this.index++;
-//         }
-// ,
         // funzione per mandare vanti immagine
         cambiaOggettoNext(){
             this.index++;
             if( this.index > this.obj.length -1){
-            return this.index = 0;
+             this.index = 0;
             }
         }    
 ,
@@ -40,21 +36,15 @@ var app = new Vue(
         cambiaOggettoPrev(){
             this.index--;
             if( this.index < 0){
-            return this.index = this.obj.length -1;
+             this.index = this.obj.length -1;
             }    
         }    
-,
-        // primo palline restituisce prima immagine
-        cambiaOggettoDot1(){
-            return this.index = 0
-        }    
 ,        
-        // tutto il resto dei pallini che restituisce la corrispondente immagine
-        cambiaOggettoDot(){
-            return this.index++ 
+        // pallini che restituisce la corrispondente immagine
+        cambiaOggettoDot(indice){
+            this.index = indice;
         }    
-
-     
+        
     }
 }
  );

@@ -14,7 +14,7 @@
    width: 100%;
 }
 
-.thumbnail{
+.dots{
     display: inline-block;
     width: 400px;
     height: 50px;
@@ -22,11 +22,10 @@
     background-color: lightslategray;
 }
 
-.dots{
+.dot{
     display: inline-block;
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: yellow;
-}
 }

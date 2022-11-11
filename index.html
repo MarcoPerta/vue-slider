@@ -23,17 +23,11 @@
     </div>
     <!-- pallini cambio immagine -->
     <div>
-        <div class="thumbnail">
-            <div class="dots" @click="cambiaOggettoDot1"></div>
-            <div class="dots" @click="cambiaOggettoDot"></div>
-            <div class="dots" @click="cambiaOggettoDot"></div>
-            <div class="dots" @click="cambiaOggettoDot"></div>
-            <div class="dots" @click="cambiaOggettoDot"></div>
-        </div>
+        <div class="dots">
+            <div class="dot" v-for="(element,indice) in obj" @click="cambiaOggettoDot(indice)"></div>
+        </div>    
     </div>
   </div>
-
-
  
 
   <!-- vue.js 2.0 -->
