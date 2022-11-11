@@ -22,16 +22,16 @@ var app = new Vue(
       method: {
 
         cambiaOggettoRight: function(){
-            this.indice++;
-            if( this.indice > this.obj.length ){
-              return this.indice = 0;
+            this.index++;
+            if( this.index > this.obj.length ){
+              return this.index = 0;
             }
         }    
 ,
         cambiaOggettoLeft: function(){
-            this.indice--;
-            if( this.indice > this.obj.length ){
-                return this.indice = 0;
+            this.index--;
+            if( this.index > this.obj.length ){
+                return this.index = 0;
             }    
 
      }
