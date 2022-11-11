@@ -10,10 +10,31 @@ var app = new Vue(
     {
       el: '#root',
       data: {
-      
+        obj: [
+            { id: 1, Image: './img/basket.jpg' },
+            { id: 2, Image: './img/bicicle mountain.jpg' },
+            { id: 3, Image: './img/diving.jpg' },
+            { id: 4, Image: './img/runner.jpg' },
+            { id: 5, Image: './img/snowboard.jpg'}
+        ]
      },
+     index : 0,
       method: {
+
+        cambiaOggettoRight: function(){
+            this.indice++;
+            if( this.indice > this.obj.length ){
+              return this.indice = 0;
+            }
+        }    
+,
+        cambiaOggettoLeft: function(){
+            this.indice--;
+            if( this.indice > this.obj.length ){
+                return this.indice = 0;
+            }    
 
      }
     }
+}
  );
