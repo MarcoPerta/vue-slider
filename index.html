@@ -14,9 +14,22 @@
 
   <div id="root">
     <div class="box">
-        <div class="left-arrow" @click="cambiaOggettoRight"><i class="fa-solid fa-arrow-left"></i></div>
-        <div class="img" v-for="(element, index) in obj"><img src={{index}} {{element.Image}} alt=""> </div>
-        <div class="right-arrow" @click="cambiaOggettoLeft"><i class="fa-solid fa-arrow-right"></i></div>
+        <!-- freccia vai avanti immagine -->
+        <div class="left-arrow" @click="cambiaOggettoPrev"><i class="fa-solid fa-arrow-left"></i></div>
+        <!-- immagine -->
+        <div class="img"><img :src='obj[index].Image' alt=""></div>
+        <!-- freccia vai indietro immagine -->
+        <div class="right-arrow" @click="cambiaOggettoNext"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <!-- pallini cambio immagine -->
+    <div>
+        <div class="thumbnail">
+            <div class="dots" @click="cambiaOggettoDot1"></div>
+            <div class="dots" @click="cambiaOggettoDot"></div>
+            <div class="dots" @click="cambiaOggettoDot"></div>
+            <div class="dots" @click="cambiaOggettoDot"></div>
+            <div class="dots" @click="cambiaOggettoDot"></div>
+        </div>
     </div>
   </div>
 

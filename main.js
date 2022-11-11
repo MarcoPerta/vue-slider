@@ -16,25 +16,45 @@ var app = new Vue(
             { id: 3, Image: './img/diving.jpg' },
             { id: 4, Image: './img/runner.jpg' },
             { id: 5, Image: './img/snowboard.jpg'}
-        ]
+        ],
+        index : 0,
      },
-     index : 0,
-      method: {
 
-        cambiaOggettoRight: function(){
+    //  created: setTimeout( cambioImage, 3000 ),
+     
+      methods: {
+
+//         function cambioImage(){
+//             return this.index++;
+//         }
+// ,
+        // funzione per mandare vanti immagine
+        cambiaOggettoNext(){
             this.index++;
-            if( this.index > this.obj.length ){
-              return this.index = 0;
+            if( this.index > this.obj.length -1){
+            return this.index = 0;
             }
         }    
 ,
-        cambiaOggettoLeft: function(){
+        // funzione per mandare indietro immagine
+        cambiaOggettoPrev(){
             this.index--;
-            if( this.index > this.obj.length ){
-                return this.index = 0;
+            if( this.index < 0){
+            return this.index = this.obj.length -1;
             }    
+        }    
+,
+        // primo palline restituisce prima immagine
+        cambiaOggettoDot1(){
+            return this.index = 0
+        }    
+,        
+        // tutto il resto dei pallini che restituisce la corrispondente immagine
+        cambiaOggettoDot(){
+            return this.index++ 
+        }    
 
-     }
+     
     }
 }
  );
