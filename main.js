@@ -20,11 +20,11 @@ var app = new Vue(
         index : 0,
      },
 
-     created() {setInterval( this.cambiaOggettoNext, 10000 )},
+    //  created() {setInterval( this.cambiaOggettoNext, 10000 )},
      
       methods: {
 
-        // funzione per mandare vanti immagine
+        // funzione per mandare avanti immagine
         cambiaOggettoNext(){
             this.index++;
             if( this.index > this.obj.length -1){
@@ -44,7 +44,7 @@ var app = new Vue(
         cambiaOggettoDot(indice){
             this.index = indice;
         }    
-        
+
     }
 }
  );
